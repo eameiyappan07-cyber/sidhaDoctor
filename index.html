@@ -4,117 +4,137 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sugam Siddha & Varmam Clinic — Traditional Healing, Modern Care</title>
-  <meta name="description" content="Sugam Siddha & Varmam Clinic offers authentic Siddha medicine, holistic treatments, herbal remedies, and lifestyle guidance. Book an appointment on WhatsApp for a free demo." />
-  <meta property="og:title" content="Sugam Siddha & Varmam Clinic" />
+  <meta name="description" content="Sugam Siddha & Varmam Clinic offers authentic Siddha medicine, holistic treatments, herbal remedies, and lifestyle guidance in Gudiyattam, Vellore. Book via WhatsApp." />
+  <meta property="og:title"       content="Sugam Siddha & Varmam Clinic" />
   <meta property="og:description" content="Authentic Siddha healing • Herbal remedies • Lifestyle guidance" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Crect width='100%25' height='100%25' fill='%2314542b'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-size='64' font-family='Arial, sans-serif'%3ESugam Siddha & Varmam Clinic%3C/text%3E%3C/svg%3E" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%2314542b'/%3E%3Cpath d='M50 18c12 0 22 10 22 22S62 62 50 62 28 52 28 40 38 18 50 18z' fill='%23a3e635'/%3E%3C/svg%3E" />
-  <!-- Tailwind via CDN for fast, no-build styling -->
+  <meta property="og:type"        content="website" />
 
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Favicon (inline SVG — zero external request) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%2314532d'/%3E%3Cpath d='M50 18c12 0 22 10 22 22S62 62 50 62 28 52 28 40 38 18 50 18z' fill='%2386efac'/%3E%3C/svg%3E" />
 
+  <!-- Google Fonts (preconnect for speed) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- Custom styles -->
+  <!--
+    ✅ NO cdn.tailwindcss.com — replaced with our own CSS.
+    This eliminates the ERR_NAME_NOT_RESOLVED error on GitHub Pages
+    and any other static hosting.
+  -->
   <link rel="stylesheet" href="css/style.css" />
 
-
-<script src="https://cdn.tailwindcss.com"></script>
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
     "name": "Sugam Siddha & Varmam Clinic",
     "medicalSpecialty": "AlternativeMedicine",
-    "additionalType": "https://en.wikipedia.org/wiki/Siddha_medicine",
-    "address": {"@type":"PostalAddress","addressLocality":"Your City","addressRegion":"TN","addressCountry":"IN"},
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "No.24/1, Melpatti Road, Near Sri Subramaniyar Temple, Kamatchiamman Pet",
+      "addressLocality": "Gudiyattam",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "632602",
+      "addressCountry": "IN"
+    },
     "openingHours": "Mo-Sa 09:30-13:00,17:00-20:30",
-    "telephone": "+91-XXXXXXXXXX"
+    "telephone": "+91-9566566211"
   }
   </script>
 </head>
-<body class="bg-white text-slate-800 antialiased grain">
-  <!-- Top Bar: quick personalization for demo -->
-  <div class="w-full bg-emerald-900 text-white text-sm">
-    <div class="max-w-6xl mx-auto px-4 py-2 flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-between">
-      <div class="flex items-center gap-2">
-        <span>Doctor Name:</span>
-        <span class="px-2 py-1 rounded bg-white text-emerald-900">Dr. S. Thillaivanan, B.S.M.S.,M.D</span>
-        <span class="hidden sm:inline">|</span>
+
+<body class="grain">
+
+  <!-- ═══════════ TOP BAR ═══════════ -->
+  <div class="topbar">
+    <div class="container" style="padding-top:.5rem;padding-bottom:.5rem;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;justify-content:space-between;">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;font-size:.82rem;">
+        <span>Doctor:</span>
+        <span class="badge">Dr. S. Thillaivanan, B.S.M.S., M.D</span>
+        <span style="opacity:.4">|</span>
         <span>Clinic Phone:</span>
-        <span class="px-2 py-1 rounded bg-white text-emerald-900">9566566211</span>
+        <span class="badge">9566566211</span>
       </div>
-      <button id="lang_toggle" class="px-3 py-1 rounded-md bg-emerald-700 hover:bg-emerald-600"></button>
+      <button id="lang_toggle"></button>
     </div>
   </div>
 
-  <!-- Header -->
-  <header class="leaf-bg sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-emerald-100">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-emerald-700"><path d="M12 2C8 6 4 8 4 12c0 4 4 6 8 10 4-4 8-6 8-10 0-4-4-6-8-10Z" fill="currentColor" opacity=".15"/><path d="M12 2c-1.5 2-3 3-3 5s1.5 3 3 5c1.5-2 3-3 3-5s-1.5-3-3-5Z" fill="currentColor"/></svg>
+  <!-- ═══════════ HEADER ═══════════ -->
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding-top:1rem;padding-bottom:1rem;">
+      <!-- Brand -->
+      <div style="display:flex;align-items:center;gap:.75rem;">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" style="color:#15803d;flex-shrink:0;">
+          <path d="M12 2C8 6 4 8 4 12c0 4 4 6 8 10 4-4 8-6 8-10 0-4-4-6-8-10Z" fill="currentColor" opacity=".18"/>
+          <path d="M12 2c-1.5 2-3 3-3 5s1.5 3 3 5c1.5-2 3-3 3-5s-1.5-3-3-5Z" fill="currentColor"/>
+        </svg>
         <div>
-          <div id="brand" class="font-semibold text-lg"></div>
-          <p id="tagline" class="text-sm text-emerald-700"></p>
+          <div id="brand"   style="font-weight:700;font-size:1.05rem;line-height:1.2;"></div>
+          <div id="tagline" style="font-size:.78rem;color:#15803d;"></div>
         </div>
       </div>
-      <nav class="hidden md:flex gap-6 text-sm">
-        <a id="nav_about" href="#about" class="hover:text-emerald-700"></a>
-        <a id="nav_services" href="#services" class="hover:text-emerald-700"></a>
-        <a id="nav_doctor" href="#doctor" class="hover:text-emerald-700"></a>
-        <a id="nav_hours" href="#hours" class="hover:text-emerald-700"></a>
-        <a id="nav_contact" href="#contact" class="hover:text-emerald-700"></a>
+
+      <!-- Nav -->
+      <nav class="header-nav" style="display:flex;gap:1.5rem;">
+        <a id="nav_about"    href="#about"></a>
+        <a id="nav_services" href="#services"></a>
+        <a id="nav_doctor"   href="#doctor"></a>
+        <a id="nav_hours"    href="#hours"></a>
+        <a id="nav_contact"  href="#contact"></a>
       </nav>
-      <div class="hidden md:flex items-center gap-3">
-        <a id="wa_link" href="#" target="_blank" class="px-3 py-2 bg-emerald-700 text-white rounded-xl hover:bg-emerald-600" aria-label="WhatsApp">
-          <span id="cta_whatsapp"></span>
-        </a>
-        <a id="call_link" href="#" class="px-3 py-2 border border-emerald-700 text-emerald-800 rounded-xl hover:bg-emerald-50">
-          <span id="cta_call"></span>
-        </a>
+
+      <!-- CTA -->
+      <div class="header-cta" style="display:flex;gap:.6rem;align-items:center;">
+        <a class="cta-wa  wa-link"   href="#" target="_blank" aria-label="WhatsApp"><span id="cta_whatsapp"></span></a>
+        <a class="cta-call call-link" href="#"                aria-label="Call">    <span id="cta_call"></span></a>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="section leaf-bg" id="hero">
-    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight text-emerald-900">Holistic <span class="text-emerald-700">Siddha</span> Healing</h1>
-        
-		  <!--img src="images/hero.png" alt="Siddha medicine herbs" class="mx-auto rounded-2xl shadow-lg w-full max-w-3xl"-->
-        <p id="hero_line" class="mt-4 text-lg text-slate-700"></p>
-        <img src="images/hero.png" alt="Doctor Image" class="max-w-xs rounded-2xl shadow-md">
-        <div class="mt-6 flex gap-3">
-          <a href="#contact" class="px-5 py-3 bg-emerald-700 text-white rounded-2xl hover:bg-emerald-600">Get Started</a>
-          <a href="#services" class="px-5 py-3 border border-emerald-700 text-emerald-800 rounded-2xl hover:bg-emerald-50">View Treatments</a>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="leaf-bg section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Left -->
+        <div class="fade-up">
+          <h1>Holistic <span>Siddha</span> Healing</h1>
+          <p id="hero_line" style="margin-top:1rem;font-size:1.05rem;color:#334155;max-width:34rem;"></p>
+          <img src="images/hero.png" alt="Doctor at Sugam Siddha Clinic" class="hero-img reveal" style="margin-top:1.5rem;">
+          <div class="hero-actions fade-up-2">
+            <a href="#contact" class="btn btn-primary">Book Appointment</a>
+            <a href="#services" class="btn btn-outline">View Treatments</a>
+          </div>
+          <ul class="hero-quick-list fade-up-3">
+            <li>Naadi / Neerkuri / Neikuri</li>
+            <li>Herbal &amp; dietary therapy</li>
+            <li>Yoga &amp; pranayama guidance</li>
+            <li>Follow-up &amp; prevention focus</li>
+          </ul>
         </div>
-        <ul class="mt-6 text-sm text-slate-600 grid grid-cols-2 gap-2 list-disc list-inside">
-          <li>Naadi / Neerkuri / Neikuri</li>
-          <li>Herbal & dietary therapy</li>
-          <li>Yoga & pranayama guidance</li>
-          <li>Follow-up & prevention focus</li>
-        </ul>
-      </div>
-      <div class="relative">
-        <div class="card rounded-3xl p-6 bg-white">
-          <h3 class="font-semibold text-slate-800 mb-3">Quick Demo — Clinic At A Glance</h3>
-          <div class="grid grid-cols-2 gap-4 text-sm">
-            <div class="p-4 rounded-2xl bg-emerald-50">
-              <div class="font-medium">Authentic Remedies</div>
-              <div class="text-slate-600">Herbs • Oils • Chooranam</div>
-            </div>
-            <div class="p-4 rounded-2xl bg-emerald-50">
-              <div class="font-medium">Personal Care</div>
-              <div class="text-slate-600">Root-cause approach</div>
-            </div>
-            <div class="p-4 rounded-2xl bg-emerald-50">
-              <div class="font-medium">Clean Pharmacy</div>
-              <div class="text-slate-600">Quality sources</div>
-            </div>
-            <div class="p-4 rounded-2xl bg-emerald-50">
-              <div class="font-medium">Easy Booking</div>
-              <div class="text-slate-600">WhatsApp & Call</div>
+
+        <!-- Right – Glance card -->
+        <div class="fade-up-2">
+          <div class="glance-card">
+            <h3>Clinic At A Glance</h3>
+            <div class="glance-grid">
+              <div class="glance-item">
+                <div class="gi-title">Authentic Remedies</div>
+                <div class="gi-sub">Herbs · Oils · Chooranam</div>
+              </div>
+              <div class="glance-item">
+                <div class="gi-title">Personal Care</div>
+                <div class="gi-sub">Root-cause approach</div>
+              </div>
+              <div class="glance-item">
+                <div class="gi-title">Clean Pharmacy</div>
+                <div class="gi-sub">Quality sources</div>
+              </div>
+              <div class="glance-item">
+                <div class="gi-title">Easy Booking</div>
+                <div class="gi-sub">WhatsApp &amp; Call</div>
+              </div>
             </div>
           </div>
         </div>
@@ -122,216 +142,238 @@
     </div>
   </section>
 
-  <!-- About -->
+
+  <!-- ═══════════ ABOUT ═══════════ -->
   <section class="section" id="about">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <h2 id="about_title" class="text-2xl md:text-3xl font-semibold text-emerald-900"></h2>
-      <div class="mt-6 grid md:grid-cols-2 gap-8">
-        <!-- LEFT COLUMN -->
-        <div class="space-y-4">
-          <div id="about_content" class="prose prose-slate max-w-none text-slate-700"></div>
-          <p class="text-sm text-slate-500">Disclaimer: Siddha care complements (not replaces) emergency 
-            or critical treatments. Always consult a qualified practitioner.
-          </p>
-        </div> 
-        <!-- RIGHT COLUMN -->
-         <div class="flex flex-col items-center gap-6">
-        <!-- Doctor Image -->
-        <img src="images/doctor.jpg" alt="Doctor Image" class="max-w-xs rounded-2xl shadow-md">
-        <!-- Doctor Card -->
-        <div class="card p-6 rounded-3xl bg-white w-full">
-          <div class="flex items-start gap-4">
-            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" class="text-emerald-700">
-              <circle cx="12" cy="12" r="10" fill="currentColor" opacity=".1"/>
-              <path d="M7 13l3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <div>
-              <div class="font-semibold">Registered Siddha Doctor</div>
-              <div id="doctor_reg" class="text-slate-600"></div>
+    <div class="container">
+      <h2 id="about_title" class="section-heading reveal"></h2>
+      <div class="about-grid">
+        <!-- Left -->
+        <div>
+          <div id="about_content" class="reveal" style="color:#334155;line-height:1.8;"></div>
+          <div class="disclaimer">
+            ⚠️ Siddha care complements (not replaces) emergency or critical treatments. Always consult a qualified practitioner.
+          </div>
+        </div>
+        <!-- Right -->
+        <div style="display:flex;flex-direction:column;align-items:center;gap:1.5rem;">
+          <img src="images/doctor.jpg" alt="Dr. S. Thillaivanan" class="about-img reveal">
+          <div class="reg-card reveal" style="width:100%;">
+            <div style="display:flex;align-items:flex-start;gap:1rem;">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" style="color:#15803d;flex-shrink:0;">
+                <circle cx="12" cy="12" r="10" fill="currentColor" opacity=".1"/>
+                <path d="M7 13l3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <div style="font-weight:600;">Registered Siddha Doctor</div>
+                <div id="doctor_reg" style="color:#475569;font-size:.875rem;margin-top:.2rem;"></div>
+              </div>
+            </div>
+            <div class="addr">
+              <strong>Clinic Address:</strong><br>
+              No.24/1, Melpatti Road, (Near Sri Subramaniyar Temple),<br>
+              Kamatchiamman Pet, Gudiyattam – 632602,<br>
+              Vellore Dt., Tamil Nadu
             </div>
           </div>
-          <div class="mt-4">
-            <label class="text-sm text-slate-600">Clinic Address</label>
-            <span class="px-2 py-1 rounded bg-white text-emerald-900">No.24/1, Melpatti Road,(Near Sri Subramaniyar Temple)Kamatchiamman Pet, Gudiyattam - 632602, Vellore Dt.Tamil Nadu</span>
-            
-          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services / Treatments -->
-  <section class="section bg-emerald-50" id="services">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <h2 id="services_title" class="text-2xl md:text-3xl font-semibold text-emerald-900"></h2>
-      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="card rounded-3xl bg-white p-6">
-		<img src="images/medicine1.png" alt="Herbal Medicine" class="rounded-lg mb-4 w-full h-48 object-cover">
-          <div class="font-semibold" id="svc1"></div>
-          <p class="text-sm text-slate-600 mt-2">Pain relief oils, chooranam, external therapies, diet guidance.</p>
+
+  <!-- ═══════════ SERVICES ═══════════ -->
+  <section class="section" id="services" style="background:#f0fdf4;">
+    <div class="container">
+      <h2 id="services_title" class="section-heading reveal"></h2>
+      <div class="services-grid">
+
+        <div class="svc-card reveal">
+          <img src="images/medicine1.png" alt="Joint and Muscle Treatment">
+          <div class="svc-name" id="svc1"></div>
+          <div class="svc-desc">Pain relief oils, chooranam, external therapies, diet guidance.</div>
         </div>
-        <div class="card rounded-3xl bg-white p-6">
-		<img src="images/medicine1.png" alt="Herbal Medicine" class="rounded-lg mb-4 w-full h-48 object-cover">
-          <div class="font-semibold" id="svc2"></div>
-          <p class="text-sm text-slate-600 mt-2">Herbal formulations to soothe, detox and restore skin health.</p>
+
+        <div class="svc-card reveal">
+          <img src="images/medicine1.png" alt="Skin Treatment">
+          <div class="svc-name" id="svc2"></div>
+          <div class="svc-desc">Herbal formulations to soothe, detox and restore skin health.</div>
         </div>
-        <div class="card rounded-3xl bg-white p-6">
-		<img src="images/medicine1.png" alt="Herbal Medicine" class="rounded-lg mb-4 w-full h-48 object-cover">
-          <div class="font-semibold" id="svc3"></div>
-          <p class="text-sm text-slate-600 mt-2">Manage acidity, IBS, constipation with herbs & diet plan.</p>
+
+        <div class="svc-card reveal">
+          <img src="images/medicine1.png" alt="Digestive Treatment">
+          <div class="svc-name" id="svc3"></div>
+          <div class="svc-desc">Manage acidity, IBS, constipation with herbs &amp; diet plan.</div>
         </div>
-        <div class="card rounded-3xl bg-white p-6">
-		<img src="images/medicine1.png" alt="Herbal Medicine" class="rounded-lg mb-4 w-full h-48 object-cover">
-          <div class="font-semibold" id="svc4"></div>
-          <p class="text-sm text-slate-600 mt-2">Holistic protocols for sugar control & lifestyle balance.</p>
+
+        <div class="svc-card reveal">
+          <img src="images/medicine1.png" alt="Diabetes Treatment">
+          <div class="svc-name" id="svc4"></div>
+          <div class="svc-desc">Holistic protocols for sugar control &amp; lifestyle balance.</div>
         </div>
-        <div class="card rounded-3xl bg-white p-6">
-		<img src="images/medicine1.png" alt="Herbal Medicine" class="rounded-lg mb-4 w-full h-48 object-cover">
-          <div class="font-semibold" id="svc5"></div>
-          <p class="text-sm text-slate-600 mt-2">Headache, sinus, sleep support via herbs & routines.</p>
+
+        <div class="svc-card reveal">
+          <img src="images/medicine1.png" alt="Neuro Treatment">
+          <div class="svc-name" id="svc5"></div>
+          <div class="svc-desc">Headache, sinus, sleep support via herbs &amp; routines.</div>
         </div>
-        <div class="card rounded-3xl bg-white p-6">
-		<img src="images/medicine1.png" alt="Herbal Medicine" class="rounded-lg mb-4 w-full h-48 object-cover">
-          <div class="font-semibold" id="svc6"></div>
-          <p class="text-sm text-slate-600 mt-2">PCOS, menstrual balance, postnatal care and wellness.</p>
+
+        <div class="svc-card reveal">
+          <img src="images/medicine1.png" alt="Women's Health">
+          <div class="svc-name" id="svc6"></div>
+          <div class="svc-desc">PCOS, menstrual balance, postnatal care and wellness.</div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Doctor -->
+
+  <!-- ═══════════ DOCTOR ═══════════ -->
   <section class="section" id="doctor">
-    <div class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-3 gap-8 items-start">
-      <div class="md:col-span-1">
-        <div class="w-full aspect-square rounded-3xl bg-emerald-100 flex items-center justify-center">
-          <!-- Placeholder avatar badge -->
-          <svg width="96" height="96" viewBox="0 0 24 24" fill="none" class="text-emerald-800"><circle cx="12" cy="8" r="4" fill="currentColor" opacity=".4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6" fill="currentColor" opacity=".2"/></svg>
-        </div>
-      </div>
-      <div class="md:col-span-2">
-        <h2 id="doctor_title" class="text-2xl md:text-3xl font-semibold text-emerald-900"></h2>
-        <p id="doctor_bio" class="mt-3 text-slate-700"></p>
-        <div class="mt-4 flex flex-wrap gap-2 text-sm">
-          <span class="px-3 py-1 bg-emerald-50 border border-emerald-200 rounded-full">B.S.M.S (Siddha)</span>
-          <span class="px-3 py-1 bg-emerald-50 border border-emerald-200 rounded-full">Member, TAMC</span>
-          <span class="px-3 py-1 bg-emerald-50 border border-emerald-200 rounded-full">8+ years experience</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Hours & Location -->
-<section class="section bg-emerald-50" id="hours">
-  <div class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-8 items-start">
-
-    <!-- Hours Column -->
-    <div>
-      <h2 id="hours_title" class="text-2xl md:text-3xl font-semibold text-emerald-900"></h2>
-      <div class="mt-4 p-6 bg-white rounded-3xl card">
-        <div class="flex items-center gap-3">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-emerald-700">
-            <path d="M7 2v3M17 2v3M3 9h18M5 7v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7" 
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <div class="container">
+      <div class="doctor-grid">
+        <div class="doctor-avatar reveal">
+          <!-- Replace with actual photo: <img src="images/doctor.jpg" alt="Dr. Thillaivanan"> -->
+          <svg width="96" height="96" viewBox="0 0 24 24" fill="none" style="color:#166534;">
+            <circle cx="12" cy="8" r="4" fill="currentColor" opacity=".4"/>
+            <path d="M4 20c0-4 4-6 8-6s8 2 8 6" fill="currentColor" opacity=".2"/>
           </svg>
-          <div>
-            <div id="hours_week" class="font-medium"></div>
-            <div id="hours_sun" class="text-slate-600"></div>
-          </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Location Column -->
-    <div>
-      <div class="p-6 bg-white rounded-3xl card">
-        <div class="font-medium mb-2">Our Location</div>
-
-        <!-- Google Map Embed -->
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5088355835924!2d78.85727807507588!3d12.939258787373186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad6d3bc95e4e6b%3A0xf3586fb886e592f5!2sSugam%20Siddha%20%26%20Varmam%20Clinic!5e0!3m2!1sen!2sin!4v1756294164091!5m2!1sen!2sin" 
-          width="100%" 
-          height="350" 
-          style="border:0; border-radius: 0.75rem;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-
-        <div id="map_hint" class="text-sm text-slate-600 mt-2">
-          <a href="https://maps.app.goo.gl/FbB4RVJu7fn4Y7Y98"
-             target="_blank"
-             class="text-emerald-700 underline">
-            Open in Google Maps
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-  <!-- Contact & Appointment -->
-  <section class="section" id="contact">
-    <div class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-8 items-start">
-      <div>
-        <h2 id="contact_title" class="text-2xl md:text-3xl font-semibold text-emerald-900"></h2>
-        <form id="appt_form" class="mt-6 space-y-4">
-          <div>
-            <label id="form_name_label" class="block text-sm text-slate-700 mb-1" for="f_name"></label>
-            <input id="f_name" required class="w-full px-3 py-2 border rounded-xl" placeholder="e.g., Kumar" />
+        <div class="reveal">
+          <h2 id="doctor_title" class="section-heading" style="margin-bottom:1rem;"></h2>
+          <p id="doctor_bio" class="doctor-bio"></p>
+          <div class="doctor-tags">
+            <span class="tag">B.S.M.S (Siddha)</span>
+            <span class="tag">M.D (Siddha)</span>
+            <span class="tag">Member, TAMC</span>
+            <span class="tag">8+ years experience</span>
           </div>
-          <div>
-            <label id="form_phone_label" class="block text-sm text-slate-700 mb-1" for="f_phone"></label>
-            <input id="f_phone" required class="w-full px-3 py-2 border rounded-xl" placeholder="e.g., 98765 43210" />
-          </div>
-          <div>
-            <label id="form_issue_label" class="block text-sm text-slate-700 mb-1" for="f_issue"></label>
-            <textarea id="f_issue" class="w-full px-3 py-2 border rounded-xl" rows="3" placeholder="Short description"></textarea>
-          </div>
-          <button id="form_submit" class="px-5 py-3 bg-emerald-700 text-white rounded-2xl hover:bg-emerald-600"></button>
-        </form>
-        <p class="text-sm text-slate-600 mt-3">No hosting or backend required — enquiries open in WhatsApp.</p>
-      </div>
-      <div>
-        <h3 class="font-semibold text-emerald-900">Patient Testimonials</h3>
-        <div class="mt-4 space-y-4">
-          <div class="p-5 bg-emerald-50 rounded-2xl">
-            <div class="font-medium">Relief from knee pain</div>
-            <p class="text-sm text-slate-700">After 4 weeks of oils and diet changes, I can walk comfortably. — <em>Ramesh</em></p>
-          </div>
-          <div class="p-5 bg-emerald-50 rounded-2xl">
-            <div class="font-medium">Better sleep & digestion</div>
-            <p class="text-sm text-slate-700">Gentle medicine, clear instructions. Felt cared for. — <em>Priya</em></p>
-          </div>
-        </div>
-
-        <div class="mt-8">
-          <h3 id="faq_title" class="font-semibold text-emerald-900"></h3>
-          <details class="mt-3 p-4 bg-white rounded-2xl card">
-            <summary class="font-medium cursor-pointer" id="faq1_q"></summary>
-            <p id="faq1_a" class="mt-2 text-sm text-slate-700"></p>
-          </details>
-          <details class="mt-3 p-4 bg-white rounded-2xl card">
-            <summary class="font-medium cursor-pointer" id="faq2_q"></summary>
-            <p id="faq2_a" class="mt-2 text-sm text-slate-700"></p>
-          </details>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="bg-emerald-900 text-emerald-50">
-    <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col md:flex-row gap-4 items-center justify-between">
-      <div id="footer" class="text-sm"></div>
-      <div class="flex gap-3">
-        <a id="wa_link_bottom" href="#" target="_blank" class="px-4 py-2 bg-emerald-700 rounded-xl" aria-label="WhatsApp" onclick="document.getElementById('wa_link').click();return false;">WhatsApp</a>
-        <a id="call_link_bottom" href="#" class="px-4 py-2 border border-emerald-300 rounded-xl" onclick="document.getElementById('call_link').click();return false;">Call</a>
+
+  <!-- ═══════════ HOURS & LOCATION ═══════════ -->
+  <section class="section" id="hours" style="background:#f0fdf4;">
+    <div class="container">
+      <div class="hours-grid">
+
+        <!-- Hours -->
+        <div>
+          <h2 id="hours_title" class="section-heading reveal"></h2>
+          <div class="hours-card reveal">
+            <div style="display:flex;align-items:flex-start;gap:.9rem;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" style="color:#15803d;flex-shrink:0;margin-top:.1rem;">
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <div id="hours_week" class="time-row"></div>
+                <div id="hours_sun"  class="time-sub"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div>
+          <div class="map-card reveal">
+            <div style="font-weight:600;margin-bottom:.9rem;">📍 Our Location</div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5088355835924!2d78.85727807507588!3d12.939258787373186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad6d3bc95e4e6b%3A0xf3586fb886e592f5!2sSugam%20Siddha%20%26%20Varmam%20Clinic!5e0!3m2!1sen!2sin!4v1756294164091!5m2!1sen!2sin"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Sugam Siddha Clinic Location">
+            </iframe>
+            <a class="map-link" href="https://maps.app.goo.gl/FbB4RVJu7fn4Y7Y98" target="_blank" rel="noopener">
+              Open in Google Maps ↗
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════ CONTACT / APPOINTMENT ═══════════ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Form -->
+        <div class="reveal">
+          <h2 id="contact_title" class="section-heading"></h2>
+          <form id="appt_form">
+            <div class="form-group">
+              <label id="form_name_label" for="f_name"></label>
+              <input id="f_name" type="text" required placeholder="e.g. Kumar" />
+            </div>
+            <div class="form-group">
+              <label id="form_phone_label" for="f_phone"></label>
+              <input id="f_phone" type="tel" required placeholder="e.g. 98765 43210" />
+            </div>
+            <div class="form-group">
+              <label id="form_issue_label" for="f_issue"></label>
+              <textarea id="f_issue" rows="3" placeholder="Short description (optional)"></textarea>
+            </div>
+            <button id="form_submit" type="submit" class="btn btn-primary" style="width:100%;justify-content:center;"></button>
+          </form>
+          <p class="form-note">📲 No sign-up needed — enquiry opens directly in WhatsApp.</p>
+        </div>
+
+        <!-- Testimonials + FAQ -->
+        <div class="reveal">
+          <h3 style="font-weight:600;color:#14532d;margin-bottom:1rem;">Patient Testimonials</h3>
+          <div style="display:flex;flex-direction:column;gap:.75rem;">
+            <div class="testi-card">
+              <div class="tname">⭐⭐⭐⭐⭐ — Relief from knee pain</div>
+              <p>After 4 weeks of oils and diet changes, I can walk comfortably. — <em>Ramesh</em></p>
+            </div>
+            <div class="testi-card">
+              <div class="tname">⭐⭐⭐⭐⭐ — Better sleep &amp; digestion</div>
+              <p>Gentle medicine, clear instructions. Felt truly cared for. — <em>Priya</em></p>
+            </div>
+          </div>
+
+          <div style="margin-top:2rem;">
+            <div id="faq_title" class="faq-heading"></div>
+            <details class="faq-item">
+              <summary id="faq1_q"></summary>
+              <p id="faq1_a"></p>
+            </details>
+            <details class="faq-item">
+              <summary id="faq2_q"></summary>
+              <p id="faq2_a"></p>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div id="footer" class="footer-text"></div>
+        <div class="footer-btns">
+          <a class="footer-wa  wa-link"   href="#" target="_blank">WhatsApp</a>
+          <a class="footer-call call-link" href="#">Call Us</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- App JS -->
-  <script src="js/app.js" defer></script>
+
+  <!--
+    ✅ app.js loaded LAST (no 'defer' needed when placed at end of body).
+    All DOM elements above are already parsed when this script runs.
+  -->
+  <script src="js/app.js"></script>
+
 </body>
 </html>
