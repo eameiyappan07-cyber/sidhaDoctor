@@ -17,6 +17,7 @@ const LANG = {
     tagline:          "Traditional Healing • Modern Care",
     nav_about:        "About",
     nav_services:     "Treatments",
+	nav_books:        "Books",						  
     nav_doctor:       "Doctor",
     nav_hours:        "Hours",
     nav_contact:      "Contact",
@@ -60,6 +61,7 @@ const LANG = {
     tagline:          "பாரம்பரிய குணப்படுத்தல் • நவீன கவனிப்பு",
     nav_about:        "எங்களைப் பற்றி",
     nav_services:     "சிகிச்சைகள்",
+	nav_books:        "நூல்கள்",										  
     nav_doctor:       "மருத்துவர்",
     nav_hours:        "நேரம்",
     nav_contact:      "தொடர்பு",
@@ -124,6 +126,7 @@ function render(l) {
   const navPairs = [
     ["nav_about",    "mob_about",    T.nav_about],
     ["nav_services", "mob_services", T.nav_services],
+	["nav_books",    "mob_books",    T.nav_books],											  
     ["nav_doctor",   "mob_doctor",   T.nav_doctor],
     ["nav_hours",    "mob_hours",    T.nav_hours],
     ["nav_contact",  "mob_contact",  T.nav_contact],
